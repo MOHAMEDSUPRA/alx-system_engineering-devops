@@ -1,1 +1,33 @@
-postmortem
+**Title: "The Great WordPress Fumble: A Tale of Typos and Triumph"**
+
+🚨 **Emergency Alert: Code Red - Blogging Emergency!** 🚨
+
+Greetings, fellow code wranglers and digital daredevils! Buckle up for a rollercoaster ride through the tumultuous landscape of a recent web development misadventure. Today, we unveil the riveting saga of ALX's System Engineering & DevOps Project 0x19 – the day the code gremlins came out to play!
+
+**🔍 Unveiling the Mystery: The 500 Internal Server Error Outage!**
+
+Picture this: it's a tranquil West African morning, the birds are chirping, the coffee is brewing, and developers are blissfully unaware of the storm brewing in their Ubuntu 14.04 container. Suddenly, chaos ensues – GET requests lead to 500 Internal Server Errors! Panic! Pandemonium! Puzzlement!
+
+Our valiant bug debugger, Brennan (BDB), steps up to the plate around 19:20 PST – wearing a cape of command line wizardry and a helmet of hope.
+
+**🕵️ Debugging Odyssey: In Search of the Phantom Phpp File**
+
+With the grace of a debugging ninja, BDB conducts a symphony of terminal commands. Two Apache processes are spotted frolicking in the process list, but peace is far from restored. Strace is summoned, expectations are high, but alas, disappointment reigns supreme. Until... a glimmer of hope – an -1 ENOENT error surfaces! A wild phpp file appears!
+
+In a daring maneuver, BDB ventures into the abyss of the /var/www/html/ directory, armed with Vim and a heart full of courage. Lo and behold! The elusive phpp extension is found cavorting in wp-settings.php. The culprit is unmasked – a typo, a single 'p' too many.
+
+**🔧 Patching the Glitch: Puppet to the Rescue!**
+
+Our hero, having triumphed over the typo terror, tests the server with a swagger-filled curl. Victory! The 200 A-ok status is restored to the land of HTTP. But wise as he is, BDB doesn’t stop there. A Puppet manifest (cue the dramatic music) is crafted – 0-strace_is_your_friend.pp – an automated sentinel to guard against future typos!
+
+**🚀 Prevention Proclamation: Testing, Monitoring, and the Programmer's Oath**
+
+With the crisis averted, BDB imparts words of wisdom. Test, test, test! A battle cry against the tyranny of typos. Implement status monitoring, because even servers deserve a watchdog. And in a twist of irony, an automated fixer-upper, the Puppet manifest, is the final piece of armor against the unforeseen.
+
+**✨ Conclusion: The Heroes We Never Knew We Needed**
+
+In this epic tale, a seemingly insignificant typo brought an entire web server to its knees. But fear not, for BDB emerged as the unsung hero, armed with wit, Vim, and Puppet magic. The lesson? Even programmers, demigods of code, can succumb to the treacherous typo trap.
+
+So, dear reader, let this postmortem be a beacon of enlightenment in your coding escapades. As we navigate the digital realm, let us remember: test like your server's life depends on it, monitor like a hawk, and always, always, double-check those pesky file extensions.
+
+Happy coding, brave souls! May your code be bug-free, your servers robust, and your typos forever banished to the realm of forgotten mistakes! 🚀🦄
